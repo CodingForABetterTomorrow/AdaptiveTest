@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class=" col-md-6 col-md-offset-4" >
+<h1 align="center"><b><font color="blue">{{ title }}</font> </b></h1>
+  <form method="POST"> {% csrf_token %}
+    <div class="form-group">
+        {% for field in form %}
+        <label align="center"> <b>{{field.label_tag}}</b> </label><br>
+        {{field}}<br>
+        {% endfor %}
+    </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</body>
+</html>

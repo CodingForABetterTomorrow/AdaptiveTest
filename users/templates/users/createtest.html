@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Hell</title>
+</head>
+<body>
+<div class="container">
+    
+        <form action="" method="POST">  {% csrf_token %}
+            <h1>Test Create</h1>
+            {% for field in form %}
+            <div>
+                <label class ="" >{{field.label_tag}}</label><br>
+                {{ field }}<br>
+            </div>
+            {% endfor %}
+            <div>
+                <input type="submit" value="Start the test" />
+                
+                
+            </div>
+        </form><!-- form -->
+        
+ 
+</div><!-- container -->
+</body>
+</html>
