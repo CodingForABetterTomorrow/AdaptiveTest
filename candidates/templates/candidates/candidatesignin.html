@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+<meta charset="utf-8">
+<title>Candidate Register</title>
+<link rel="stylesheet" type="text/css" href="{% static 'candidates/candidatesigninstyle.css' %}" />
+</head>
+<body>
+<div class="container">
+    <section id="content">
+        <form action="" method="POST">  {% csrf_token %}
+            <h1>Test Login</h1>
+            {% for field in form %}
+            <div>
+                <label class ="" >{{field.label_tag}}</label><br>
+                {{ field }}<br>
+            </div>
+            {% endfor %}
+            <div>
+                <input type="submit" value="Start the test" />
+                
+                
+            </div>
+        </form><!-- form -->
+        
+    </section><!-- content -->
+</div><!-- container -->
+</body>
+</html>
